@@ -1,11 +1,16 @@
 #define _CRT_SECURE_NO_WARNINGS
 
-#include "Disassemblerr.h"
+#include "Disassembler.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 
 int main(int argc, char** argv) {
+	if (argc == 1) {
+		printf("Usage: ./%s <CHIP8_ROM>.ch8\n", "C8Disassembler.exe");
+		return EXIT_FAILURE;
+	}
+
 	FILE* file = fopen(argv[1], "rb");
 	printf("%s\n", argv[1]);
 	printf("");

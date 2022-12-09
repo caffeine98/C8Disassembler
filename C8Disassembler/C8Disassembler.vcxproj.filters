@@ -23,7 +23,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Disassemblerr.h">
+    <ClInclude Include="Disassembler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
