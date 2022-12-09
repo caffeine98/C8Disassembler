@@ -23,14 +23,17 @@ int main(int argc, char** argv) {
 	fclose(file);
 
 	int pc = 0x200;
-
-	printf("pc \tcode[0] code[1] Opcode \t\tC-Pseudo\n");
+	int num_of_lines = 0;
+	printf("PC \tcode[0] code[1] Opcode \t\tC-Pseudo\n");
 
 	while (pc < (fSize + 0x200)) {
 		DisassembleChip8(buffer, pc);
 		pc += 2;
 		printf("\n");
+		++num_of_lines;
 	}
+
+	printf("\nTotal number of lines: %d\n", num_of_lines);
 
 	return EXIT_SUCCESS;
 }
